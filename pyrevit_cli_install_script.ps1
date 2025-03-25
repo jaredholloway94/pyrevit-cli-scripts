@@ -165,7 +165,7 @@ function Update-pyRevitCliVersion
     # (this is the only way to guarantee security dialog will not pop up during silent install)
     if (-not (Test-Path "C:\pyRevit"))
     {
-        mkdir "C:\pyRevit"
+        mkdir "C:\pyRevit" > $null
     }
 
     # main
@@ -192,7 +192,7 @@ function Update-pyRevitCliVersion
 
             Update-pyRevitCliVersion `
                 -DotNetInstallerPath:$DotNetInstallerPath `
-                -PyRevitCliInstallerPath:$PyRevitCliInstallerPath
+                -PyRevitCliInstallerPath:$PyRevitCliInstallerPath `
                 -RecursionDepth:($RecursionDepth+1) `
                 -Quiet:$Quiet
         }
@@ -218,7 +218,7 @@ function Update-pyRevitCliVersion
 
             Update-pyRevitCliVersion `
                 -DotNetInstallerPath:$DotNetInstallerPath `
-                -PyRevitCliInstallerPath:$PyRevitCliInstallerPath
+                -PyRevitCliInstallerPath:$PyRevitCliInstallerPath `
                 -RecursionDepth:($RecursionDepth+1) `
                 -Quiet:$Quiet
         }
@@ -244,7 +244,7 @@ function Update-pyRevitCliVersion
 
             Update-pyRevitCliVersion `
                 -DotNetInstallerPath:$DotNetInstallerPath `
-                -PyRevitCliInstallerPath:$PyRevitCliInstallerPath
+                -PyRevitCliInstallerPath:$PyRevitCliInstallerPath `
                 -RecursionDepth:($RecursionDepth+1) `
                 -Quiet:$Quiet
         }
