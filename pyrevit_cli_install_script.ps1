@@ -109,14 +109,14 @@ function Remove-pyRevitPreviousInstalls
 
         if (Test-Path $usr_config_path)
         {
-            Write-HostQuiet "Removing user pyrevit_config.ini for $($_.name)..." -Quiet:$Quiet
+            Write-HostQuiet "Removing user pyrevit_config.ini for $($_.name) ..." -Quiet:$Quiet
             Get-ChildItem $usr_config_path | Remove-Item -Force
             Remove-Item $usr_config_path -Force
             Write-HostQuiet "Done.`n" -Quiet:$Quiet
         }
     }
 
-    Write-HostQuiet "All previous pyRevit installs have been removed." -Quiet:$Quiet
+    Write-HostQuiet "All previous pyRevit installs have been removed.`n" -Quiet:$Quiet
 }
 
 
@@ -254,7 +254,7 @@ function Update-pyRevitCliVersion
             # pyRevit CLI is installed, and up-to-date.
             # continue.
 
-            Write-HostQuiet "PyRevit CLI and its dependencies are up to date." -Quiet:$Quiet
+            Write-HostQuiet "PyRevit CLI and its dependencies are up to date.`n" -Quiet:$Quiet
         }
     }
 }
